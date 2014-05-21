@@ -17,6 +17,7 @@ return array(
     'Sensio\\Bundle\\FrameworkExtraBundle' => array($vendorDir . '/sensio/framework-extra-bundle'),
     'Sensio\\Bundle\\DistributionBundle' => array($vendorDir . '/sensio/distribution-bundle'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    'Lexik\\Bundle\\CurrencyBundle' => array($vendorDir . '/lexik/currency-bundle'),
     'JMS\\GoogleClosureBundle' => array($vendorDir . '/jms/google-closure-bundle'),
     'Incenteev\\ParameterHandler' => array($vendorDir . '/incenteev/composer-parameter-handler'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib'),
@@ -30,5 +31,5 @@ return array(
     'Doctrine\\Bundle\\DoctrineBundle' => array($vendorDir . '/doctrine/doctrine-bundle'),
     'Braincrafted\\Bundle\\BootstrapBundle' => array($vendorDir . '/braincrafted/bootstrap-bundle'),
     'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
-    '' => array($baseDir . '/src'),
+    '' => array($baseDir . '/src', $vendorDir . '/aerialship/lightsaml/src', $vendorDir . '/aerialship/saml-sp-bundle/src'),
 );

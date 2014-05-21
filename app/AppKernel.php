@@ -16,9 +16,10 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-        	new Nasajon\CalendarioBundle\NasajonCalendarioBundle(),
-        	new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
-        	new JMS\GoogleClosureBundle\JMSGoogleClosureBundle(),
+	    new Nasajon\CalendarioBundle\NasajonCalendarioBundle(),
+	    new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+	    new JMS\GoogleClosureBundle\JMSGoogleClosureBundle(),
+	    new AerialShip\SamlSPBundle\AerialShipSamlSPBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -437,6 +437,39 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Nasajon\\CalendarioBundle\\Controller\\DefaultController::indexAction',  '_route' => 'nasajon_calendario_homepage',);
         }
 
+        if (0 === strpos($pathinfo, '/saml/sp')) {
+            // aerial_ship_saml_sp.security.login
+            if ($pathinfo === '/saml/sp/login') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::loginAction',  '_route' => 'aerial_ship_saml_sp.security.login',);
+            }
+
+            // aerial_ship_saml_sp.security.acs
+            if ($pathinfo === '/saml/sp/acs') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::checkAction',  '_route' => 'aerial_ship_saml_sp.security.acs',);
+            }
+
+            // aerial_ship_saml_sp.security.logout
+            if ($pathinfo === '/saml/sp/logout') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::logoutAction',  '_route' => 'aerial_ship_saml_sp.security.logout',);
+            }
+
+            // aerial_ship_saml_sp.security.failure
+            if ($pathinfo === '/saml/sp/failure') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::failureAction',  '_route' => 'aerial_ship_saml_sp.security.failure',);
+            }
+
+            // aerial_ship_saml_sp.security.federation_metadata
+            if ($pathinfo === '/saml/sp/FederationMetadata.xml') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::federationMetadataAction',  '_route' => 'aerial_ship_saml_sp.security.federation_metadata',);
+            }
+
+            // aerial_ship_saml_sp.security.discovery
+            if ($pathinfo === '/saml/sp/discovery') {
+                return array (  '_controller' => 'AerialShip\\SamlSPBundle\\Controller\\SecurityController::discoveryAction',  '_route' => 'aerial_ship_saml_sp.security.discovery',);
+            }
+
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

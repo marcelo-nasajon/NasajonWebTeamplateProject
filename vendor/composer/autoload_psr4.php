@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Simpleweb\\SaaSBundle\\' => array($vendorDir . '/simpleweb/saas-bundle'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
 );

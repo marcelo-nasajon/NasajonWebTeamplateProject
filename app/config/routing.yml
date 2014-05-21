@@ -2,3 +2,6 @@ nasajon_calendario:
     resource: "@NasajonCalendarioBundle/Resources/config/routing.yml"
     prefix:   /
 
+
+aerialship_saml_sp_bundle:
+    resource: "@AerialShipSamlSPBundle/Resources/config/routing.yml"

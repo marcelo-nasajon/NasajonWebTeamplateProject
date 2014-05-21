@@ -3,8 +3,78 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "570ba8637e68f0482003cf3c124dfb11",
+    "hash": "01a59d322eedc93d44fc4e3d2f5de6e7",
     "packages": [
+        {
+            "name": "aerialship/lightsaml",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aerialship/lightsaml.git",
+                "reference": "ef9fbf282218108b48760de460ba4732ba24f42f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aerialship/lightsaml/zipball/ef9fbf282218108b48760de460ba4732ba24f42f",
+                "reference": "ef9fbf282218108b48760de460ba4732ba24f42f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "rnijveld/xmlseclibs": "1.3.1",
+                "symfony/console": ">=2.2"
+            },
+            "bin": [
+                "bin/lightsaml"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Light SAML2 php library",
+            "time": "2014-05-12 10:19:47"
+        },
+        {
+            "name": "aerialship/saml-sp-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aerialship/SamlSPBundle.git",
+                "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aerialship/SamlSPBundle/zipball/d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
+                "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
+                "shasum": ""
+            },
+            "require": {
+                "aerialship/lightsaml": "dev-master",
+                "php": ">=5.4.1",
+                "symfony/symfony": "~2.2"
+            },
+            "suggest": {
+                "doctrine/orm": "If you want store sso state to database"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Symfony2 SAML2 authentication bundle",
+            "time": "2014-05-18 21:58:56"
+        },
         {
             "name": "braincrafted/bootstrap-bundle",
             "version": "v2.0.1",
@@ -282,16 +352,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7"
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ceb18cf9b0230f3ea208b6238130fd415abda0a7",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
                 "shasum": ""
             },
             "require": {
@@ -301,6 +371,9 @@
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
             },
             "type": "library",
             "extra": {
@@ -353,7 +426,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-09-07 10:20:34"
+            "time": "2014-05-21 19:28:51"
         },
         {
             "name": "doctrine/dbal",
@@ -910,6 +983,54 @@
             "time": "2013-07-19 00:03:27"
         },
         {
+            "name": "lexik/currency-bundle",
+            "version": "v1.2.3",
+            "target-dir": "Lexik/Bundle/CurrencyBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikCurrencyBundle.git",
+                "reference": "97203ad4ecf7522655434e3a323135dd97fe741e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lexik/LexikCurrencyBundle/zipball/97203ad4ecf7522655434e3a323135dd97fe741e",
+                "reference": "97203ad4ecf7522655434e3a323135dd97fe741e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Lexik\\Bundle\\CurrencyBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dev Lexik",
+                    "email": "dev@lexik.fr"
+                },
+                {
+                    "name": "Cedric Girard",
+                    "email": "c.girard@lexik.fr"
+                }
+            ],
+            "description": "This Symfony2 bundle provide a service and a Twig extension to convert and display currencies.",
+            "homepage": "https://github.com/lexik/LexikCurrencyBundle",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "currency"
+            ],
+            "time": "2014-03-24 08:10:12"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.9.1",
             "source": {
@@ -1014,6 +1135,56 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "rnijveld/xmlseclibs",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rnijveld/xmlseclibs.git",
+                "reference": "0a79da470eac5b836e65fe40a834a9d3b1c627cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rnijveld/xmlseclibs/zipball/0a79da470eac5b836e65fe40a834a9d3b1c627cd",
+                "reference": "0a79da470eac5b836e65fe40a834a9d3b1c627cd",
+                "shasum": ""
+            },
+            "replace": {
+                "cdatazone/xmlseclibs": "self.version",
+                "fr3d/xmlseclibs": "self.version"
+            },
+            "suggest": {
+                "ext/mcrypt": "",
+                "ext/openssl": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xmlseclibs.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Richards"
+                }
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "http://code.google.com/p/xmlseclibs/",
+            "keywords": [
+                "certificate",
+                "security",
+                "signature",
+                "signing",
+                "x.509",
+                "xml",
+                "xmlsec"
+            ],
+            "time": "2013-06-19 00:00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1171,6 +1342,57 @@
             "time": "2013-08-21 18:09:35"
         },
         {
+            "name": "simpleweb/saas-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simpleweb/SaaSBundle.git",
+                "reference": "4e892c8c01f48036240a87c7524f526583dcb98d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simpleweb/SaaSBundle/zipball/4e892c8c01f48036240a87c7524f526583dcb98d",
+                "reference": "4e892c8c01f48036240a87c7524f526583dcb98d",
+                "shasum": ""
+            },
+            "require": {
+                "lexik/currency-bundle": "~1.2",
+                "php": "~5.4",
+                "symfony/form": "~2.4",
+                "symfony/framework-bundle": "~2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Simpleweb\\SaaSBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Lacey",
+                    "email": "steve@simpleweb.co.uk"
+                }
+            ],
+            "description": "Symfony2 bundle that makes it easier to build subscription-based SaaS products",
+            "keywords": [
+                "saas",
+                "simpleweb"
+            ],
+            "time": "2014-05-08 14:39:59"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.2.0",
             "source": {
@@ -1289,20 +1511,21 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.0.1",
+            "version": "v1.1.1",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "fdba214b1e087c149843bde976263c53ac10c975"
+                "reference": "0b82950ece96c1f091dcdb088298bd72dbc83a47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
-                "reference": "fdba214b1e087c149843bde976263c53ac10c975",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/0b82950ece96c1f091dcdb088298bd72dbc83a47",
+                "reference": "0b82950ece96c1f091dcdb088298bd72dbc83a47",
                 "shasum": ""
             },
             "require": {
+                "lib-icu": ">=3.8",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -1332,7 +1555,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-10-04 09:12:07"
+            "time": "2013-10-04 10:05:23"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1717,20 +1940,17 @@
             "time": "2014-02-13 10:19:29"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jms/google-closure-bundle": 20
+        "jms/google-closure-bundle": 20,
+        "aerialship/saml-sp-bundle": 20,
+        "aerialship/lightsaml": 20,
+        "simpleweb/saas-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
