@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Drive Contábil Nasajon</title>
+
+		<!-- Bootstrap -->
+<!-- 		<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen"> -->
+
+		<!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+
+		{% stylesheets 
+		      '@NasajonCalendarioBundle/Resources/public/css/bootstrap.custom.min.css'
+		      '@NasajonCalendarioBundle/Resources/public/css/autocomplete.css'
+		      '@NasajonCalendarioBundle/Resources/public/css/closure-menu.css'
+		      '@NasajonCalendarioBundle/Resources/public/css/dialog.css'
+		      '@NasajonCalendarioBundle/Resources/public/css/estilo.css'
+
+		%}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
+
+		{% stylesheets
+		    output='assets/fonts/glyphicons-halflings-regular.ttf'
+		    'bundles/bootstrap/fonts/glyphicons-halflings-regular.ttf'
+		%}{% endstylesheets %}
+	</head>
+	<body>
+		<header id="main-header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						{% image '@NasajonCalendarioBundle/Resources/public/images/logo.jpg' %}
+						<img id="logo" src="{{ asset_url }}" />
+						{% endimage %}						
+					</div>
+					<div class="col-md-5">
+						<form action="" class="busca" id="drive-contabil-nasajon">
+							<span><span class="hidden-xs">Drive Contábil Nasajon</span>&nbsp;</span>
+							<div class="input-group">
+								<input type="text" class="form-control" id="busca-input">
+								<span class="input-group-btn">
+									<button class="btn btn-com-icon">
+										{% image '@NasajonCalendarioBundle/Resources/public/images/icone-lupa.jpg' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %}
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-3">
+						<form action="" class="busca" id="nome-usuario">
+							<div id="menu-utilidades" class="pull-right">
+								<a href="#" id="botao-aplicativos">
+								{% image '@NasajonCalendarioBundle/Resources/public/images/icone-ferramentas.jpg' %}
+								    <img src="{{ asset_url }}" />
+								{% endimage %}
+								</a>
+								<a href="logout" id="logout">
+									{% image '@NasajonCalendarioBundle/Resources/public/images/icone-logout.jpg' %}
+									    <img src="{{ asset_url }}" />
+									{% endimage %}
+								</a>
+								<ul id="menu-aplicativos" for="dButton" class="goog-menu" style="display:none">
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #1</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #2</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #3</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #4</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #5</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #6</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #7</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #8</a>
+									</li>
+									<li>
+										<a href="#">{% image '@NasajonCalendarioBundle/Resources/public/images/65x65.png' %}
+										    <img src="{{ asset_url }}" />
+										{% endimage %} App #9</a>
+									</li>
+								</ul>
+							</div>
+							<div class="input-group">
+								{% image '@NasajonCalendarioBundle/Resources/public/images/35x35.png' %}
+								    <img src="{{ asset_url }}" />
+								{% endimage %}
+								<h2><a href="#">Usuario</a></h2>
+							</div>
+						</form>						
+					</div>
+				</div>
+			</div>
+		</header>
+
+		{% block content %}
+		  
+		  
+		{% endblock %}
+
+
+
+	 {% block javascripts %}
+		<script src="{{ asset('js/google-closure/closure/goog/base.js')}}"></script>	   
+
+		{% javascripts 
+		    '@NasajonCalendarioBundle/Resources/public/js/jquery/jquery-1.11.1.min.js'
+		    '@NasajonCalendarioBundle/Resources/public/js/jquery/jquery.price_format.1.8.min.js'
+		    '@NasajonCalendarioBundle/Resources/public/js/jquery/jquery.price_format.1.8.min.js'
+		    '@NasajonCalendarioBundle/Resources/public/js/pages/scripts.js'		    
+		 %}
+		<script src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+		<script src="{{ asset('js/bootstrap.js') }}"></script>	   
+
+	{% endblock %}
+	</body>
+</html>

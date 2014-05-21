@@ -1,0 +1,3 @@
+nasajon_calendario_homepage:
+    pattern:  /
+    defaults: { _controller: NasajonCalendarioBundle:Default:index }
