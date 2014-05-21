@@ -302,7 +302,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAnnotationReaderService()
     {
-        return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/annotations', true);
+        return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/Sistemas/Workspace/symfony/app/cache/dev/annotations', true);
     }
 
     /**
@@ -317,11 +317,11 @@ class appDevDebugProjectContainer extends Container
     {
         $a = $this->get('templating.loader');
 
-        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('config' => new \Symfony\Bundle\AsseticBundle\Factory\Loader\ConfigurationLoader(), 'twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('/var/www/html/NasajonWebTeamplateProject/app/cache/dev/assetic/config'), true)));
+        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('config' => new \Symfony\Bundle\AsseticBundle\Factory\Loader\ConfigurationLoader(), 'twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/Sistemas/Workspace/symfony/app/cache/dev/assetic/config'), true)));
 
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource(array('bootstrap_css' => array(0 => array(0 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/dist/css/bootstrap.css'), 1 => array(0 => 'cssrewrite'), 2 => array('output' => 'css/bootstrap.css')), 'bootstrap_js' => array(0 => array(0 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/transition.js', 1 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/alert.js', 2 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/button.js', 3 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/carousel.js', 4 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/collapse.js', 5 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/dropdown.js', 6 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/modal.js', 7 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/tooltip.js', 8 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/popover.js', 9 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/scrollspy.js', 10 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/tab.js', 11 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap/js/affix.js', 12 => '/var/www/html/NasajonWebTeamplateProject/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/DependencyInjection/../Resources/js/bc-bootstrap-collection.js'), 1 => array(), 2 => array('output' => 'js/bootstrap.js')), 'jquery' => array(0 => array(0 => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/jquery/jquery/jquery-1.11.1.js'), 1 => array(), 2 => array('output' => 'js/jquery.js')))), 'config');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'NasajonCalendarioBundle', '/var/www/html/NasajonWebTeamplateProject/app/Resources/NasajonCalendarioBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'NasajonCalendarioBundle', '/var/www/html/NasajonWebTeamplateProject/src/Nasajon/CalendarioBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', '/var/www/html/NasajonWebTeamplateProject/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource(array('bootstrap_css' => array(0 => array(0 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/dist/css/bootstrap.css'), 1 => array(0 => 'cssrewrite'), 2 => array('output' => 'css/bootstrap.css')), 'bootstrap_js' => array(0 => array(0 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/transition.js', 1 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/alert.js', 2 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/button.js', 3 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/carousel.js', 4 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/collapse.js', 5 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/dropdown.js', 6 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/modal.js', 7 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/tooltip.js', 8 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/popover.js', 9 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/scrollspy.js', 10 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/tab.js', 11 => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap/js/affix.js', 12 => 'C:\\Sistemas\\Workspace\\symfony\\vendor\\braincrafted\\bootstrap-bundle\\Braincrafted\\Bundle\\BootstrapBundle\\DependencyInjection/../Resources/js/bc-bootstrap-collection.js'), 1 => array(), 2 => array('output' => 'js/bootstrap.js')), 'jquery' => array(0 => array(0 => 'C:/Sistemas/Workspace/symfony/app/../vendor/jquery/jquery/jquery-1.11.1.js'), 1 => array(), 2 => array('output' => 'js/jquery.js')))), 'config');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'NasajonCalendarioBundle', 'C:/Sistemas/Workspace/symfony/app/Resources/NasajonCalendarioBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'NasajonCalendarioBundle', 'C:\\Sistemas\\Workspace\\symfony\\src\\Nasajon\\CalendarioBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', 'C:/Sistemas/Workspace/symfony/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
 
         return $instance;
     }
@@ -524,7 +524,7 @@ class appDevDebugProjectContainer extends Container
         $a = $this->get('kernel');
         $b = $this->get('templating.filename_parser');
 
-        $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, '/var/www/html/NasajonWebTeamplateProject/app/Resources');
+        $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/Sistemas/Workspace/symfony/app/Resources');
 
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
     }
@@ -750,15 +750,15 @@ class appDevDebugProjectContainer extends Container
         $a = $this->get('annotation_reader');
 
         $b = new \Doctrine\Common\Cache\ArrayCache();
-        $b->setNamespace('sf2orm_default_9e400dadacf5bfa7069ff175f0d8a48eaa8918ff69694b10dd1e69ffcd3d49b4');
+        $b->setNamespace('sf2orm_default_ad6b6c2768ede2dfc91ab46a3c899f3a77179a1cbd4873b027b533aef1d656bf');
 
         $c = new \Doctrine\Common\Cache\ArrayCache();
-        $c->setNamespace('sf2orm_default_9e400dadacf5bfa7069ff175f0d8a48eaa8918ff69694b10dd1e69ffcd3d49b4');
+        $c->setNamespace('sf2orm_default_ad6b6c2768ede2dfc91ab46a3c899f3a77179a1cbd4873b027b533aef1d656bf');
 
         $d = new \Doctrine\Common\Cache\ArrayCache();
-        $d->setNamespace('sf2orm_default_9e400dadacf5bfa7069ff175f0d8a48eaa8918ff69694b10dd1e69ffcd3d49b4');
+        $d->setNamespace('sf2orm_default_ad6b6c2768ede2dfc91ab46a3c899f3a77179a1cbd4873b027b533aef1d656bf');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => '/var/www/html/NasajonWebTeamplateProject/src/Nasajon/CalendarioBundle/Entity', 1 => '/var/www/html/NasajonWebTeamplateProject/vendor/aerialship/saml-sp-bundle/src/AerialShip/SamlSPBundle/Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => 'C:\\Sistemas\\Workspace\\symfony\\src\\Nasajon\\CalendarioBundle\\Entity', 1 => 'C:\\Sistemas\\Workspace\\symfony\\vendor\\aerialship\\saml-sp-bundle\\src\\AerialShip\\SamlSPBundle\\Entity'));
 
         $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
         $f->addDriver($e, 'Nasajon\\CalendarioBundle\\Entity');
@@ -770,7 +770,7 @@ class appDevDebugProjectContainer extends Container
         $g->setQueryCacheImpl($c);
         $g->setResultCacheImpl($d);
         $g->setMetadataDriverImpl($f);
-        $g->setProxyDir('/var/www/html/NasajonWebTeamplateProject/app/cache/dev/doctrine/orm/Proxies');
+        $g->setProxyDir('C:/Sistemas/Workspace/symfony/app/cache/dev/doctrine/orm/Proxies');
         $g->setProxyNamespace('Proxies');
         $g->setAutoGenerateProxyClasses(true);
         $g->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -833,7 +833,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getFileLocatorService()
     {
-        return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), '/var/www/html/NasajonWebTeamplateProject/app/Resources');
+        return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/Sistemas/Workspace/symfony/app/Resources');
     }
 
     /**
@@ -1585,7 +1585,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getMonolog_Handler_MainService()
     {
-        return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('/var/www/html/NasajonWebTeamplateProject/app/logs/dev.log', 100, true);
+        return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('C:/Sistemas/Workspace/symfony/app/logs/dev.log', 100, true);
     }
 
     /**
@@ -1780,7 +1780,7 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector($this->get('doctrine'));
         $d->addLogger('default', $this->get('doctrine.dbal.logger.profiling.default'));
 
-        $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\FileProfilerStorage('file:/var/www/html/NasajonWebTeamplateProject/app/cache/dev/profiler', '', '', 86400), $a);
+        $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\FileProfilerStorage('file:C:/Sistemas/Workspace/symfony/app/cache/dev/profiler', '', '', 86400), $a);
 
         $instance->add($c);
         $instance->add($this->get('data_collector.request'));
@@ -1878,7 +1878,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getRouterService()
     {
-        return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/assetic/routing.yml', array('cache_dir' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appDevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appDevUrlMatcher', 'strict_requirements' => true), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/Sistemas/Workspace/symfony/app/cache/dev/assetic/routing.yml', array('cache_dir' => 'C:/Sistemas/Workspace/symfony/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appDevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appDevUrlMatcher', 'strict_requirements' => true), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -2019,7 +2019,7 @@ class appDevDebugProjectContainer extends Container
 
         $o = new \AerialShip\SamlSPBundle\Config\SPSigningProviderFile($f, '@NasajonCalendarioBundle/Resources/server.crt', '@NasajonCalendarioBundle/Resources/server.pem', '');
 
-        $p = new \AerialShip\SamlSPBundle\Config\SpEntityDescriptorBuilder('nasajon_calendario', $o, array('entity_id' => 'http://saml.localhost', 'base_url' => NULL, 'want_assertions_signed' => false), '/saml/sp/acs', '/saml/sp/logout', $l);
+        $p = new \AerialShip\SamlSPBundle\Config\SpEntityDescriptorBuilder('nasajon_calendario', $o, array('entity_id' => 'saml.localhost', 'base_url' => NULL, 'want_assertions_signed' => false), '/saml/sp/acs', '/saml/sp/logout', $l);
 
         $q = new \AerialShip\SamlSPBundle\Config\EntityDescriptorFileProvider($f);
         $q->setFilename('@NasajonCalendarioBundle/Resources/idp-FederationMetadata.xml');
@@ -2052,7 +2052,7 @@ class appDevDebugProjectContainer extends Container
         $y = new \AerialShip\SamlSPBundle\Security\Http\Firewall\SamlSpAuthenticationListener($b, $j, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $l, 'saml', $n, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $l, array('login_path' => '/saml/sp/login', 'failure_path' => '/saml/sp/failure', 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $a), array('check_path' => '/saml/sp/acs', 'logout_path' => '/saml/sp/logout', 'local_logout_path' => '/logout', 'use_forward' => false, 'require_previous_session' => false, 'login_path' => '/saml/sp/login', 'failure_path' => '/saml/sp/failure', 'target_path_parameter' => '_target_path', 'metadata_path' => '/saml/sp/FederationMetadata.xml', 'discovery_path' => '/saml/sp/discovery'), $a, $c);
         $y->setRelyingParty($x);
 
-        return $this->services['security.firewall.map.context.saml'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'saml', $a, $c), 2 => $m, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '537d1d37c15ca', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $j)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'saml', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/saml/sp/login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.saml'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'saml', $a, $c), 2 => $m, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '537d25185aa0b', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $j)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'saml', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/saml/sp/login', false), NULL, NULL, $a));
     }
 
     /**
@@ -2078,7 +2078,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_SecureRandomService()
     {
-        return $this->services['security.secure_random'] = new \Symfony\Component\Security\Core\Util\SecureRandom('/var/www/html/NasajonWebTeamplateProject/app/cache/dev/secure_random.seed', $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['security.secure_random'] = new \Symfony\Component\Security\Core\Util\SecureRandom('C:/Sistemas/Workspace/symfony/app/cache/dev/secure_random.seed', $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -2104,7 +2104,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSensioDistribution_WebconfiguratorService()
     {
-        return $this->services['sensio_distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('/var/www/html/NasajonWebTeamplateProject/app');
+        return $this->services['sensio_distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('C:/Sistemas/Workspace/symfony/app');
     }
 
     /**
@@ -2265,7 +2265,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSession_Storage_FilesystemService()
     {
-        return $this->services['session.storage.filesystem'] = new \Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage('/var/www/html/NasajonWebTeamplateProject/app/cache/dev/sessions', 'MOCKSESSID', $this->get('session.storage.metadata_bag'));
+        return $this->services['session.storage.filesystem'] = new \Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage('C:/Sistemas/Workspace/symfony/app/cache/dev/sessions', 'MOCKSESSID', $this->get('session.storage.metadata_bag'));
     }
 
     /**
@@ -2513,7 +2513,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_Helper_CodeService()
     {
-        return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, '/var/www/html/NasajonWebTeamplateProject/app', 'UTF-8');
+        return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/Sistemas/Workspace/symfony/app', 'UTF-8');
     }
 
     /**
@@ -3046,7 +3046,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTranslator_DefaultService()
     {
-        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini'), 'translation.loader.json' => array(0 => 'json')), array('cache_dir' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/translations', 'debug' => true));
+        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini'), 'translation.loader.json' => array(0 => 'json')), array('cache_dir' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/translations', 'debug' => true));
     }
 
     /**
@@ -3059,14 +3059,14 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTwigService()
     {
-        $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'twig.controller.exception:showAction', 'autoescape_service' => NULL, 'autoescape_service_method' => NULL, 'cache' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/twig', 'charset' => 'UTF-8', 'paths' => array()));
+        $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'twig.controller.exception:showAction', 'autoescape_service' => NULL, 'autoescape_service_method' => NULL, 'cache' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/twig', 'charset' => 'UTF-8', 'paths' => array()));
 
         $instance->addExtension(new \Symfony\Bundle\SecurityBundle\Twig\Extension\LogoutUrlExtension($this->get('templating.helper.logout_url')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\SecurityExtension($this->get('security.context', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\AssetsExtension($this));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\ActionsExtension($this));
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, '/var/www/html/NasajonWebTeamplateProject/app', 'UTF-8'));
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, 'C:/Sistemas/Workspace/symfony/app', 'UTF-8'));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\RoutingExtension($this->get('router')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\StopwatchExtension($this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
@@ -3124,19 +3124,19 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['twig.loader'] = $instance = new \Symfony\Bundle\TwigBundle\Loader\FilesystemLoader($this->get('templating.locator'), $this->get('templating.name_parser'));
 
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views', 'Framework');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views', 'Security');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views', 'Twig');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Resources/views', 'Swiftmailer');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/views', 'Doctrine');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/src/Nasajon/CalendarioBundle/Resources/views', 'NasajonCalendario');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/braincrafted/bootstrap-bundle/Braincrafted/Bundle/BootstrapBundle/Resources/views', 'BraincraftedBootstrap');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/aerialship/saml-sp-bundle/src/AerialShip/SamlSPBundle/Resources/views', 'AerialShipSamlSP');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/src/Acme/DemoBundle/Resources/views', 'AcmeDemo');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views', 'WebProfiler');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views', 'SensioDistribution');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/app/Resources/views');
-        $instance->addPath('/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', 'Framework');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', 'Security');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\src\\Nasajon\\CalendarioBundle/Resources/views', 'NasajonCalendario');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\braincrafted\\bootstrap-bundle\\Braincrafted\\Bundle\\BootstrapBundle/Resources/views', 'BraincraftedBootstrap');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\aerialship\\saml-sp-bundle\\src\\AerialShip\\SamlSPBundle/Resources/views', 'AerialShipSamlSP');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
+        $instance->addPath('C:/Sistemas/Workspace/symfony/app/Resources/views');
+        $instance->addPath('C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
 
         return $instance;
     }
@@ -3259,7 +3259,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_AssetFactoryService()
     {
-        $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), '/var/www/html/NasajonWebTeamplateProject/app/../web', true);
+        $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), 'C:/Sistemas/Workspace/symfony/app/../web', true);
 
         $instance->addWorker(new \Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker());
 
@@ -3280,7 +3280,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_CacheService()
     {
-        return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('/var/www/html/NasajonWebTeamplateProject/app/cache/dev/assetic/assets');
+        return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('C:/Sistemas/Workspace/symfony/app/cache/dev/assetic/assets');
     }
 
     /**
@@ -3385,7 +3385,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \AerialShip\SamlSPBundle\Security\Core\Authentication\Provider\SamlSpAuthenticationProvider('saml', new \AerialShip\SamlSPBundle\Security\Core\User\UserProviderAdapter($this->get('security.user.provider.concrete.in_memory')), new \Symfony\Component\Security\Core\User\UserChecker(), false), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('537d1d37c15ca')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \AerialShip\SamlSPBundle\Security\Core\Authentication\Provider\SamlSpAuthenticationProvider('saml', new \AerialShip\SamlSPBundle\Security\Core\User\UserProviderAdapter($this->get('security.user.provider.concrete.in_memory')), new \Symfony\Component\Security\Core\User\UserChecker(), false), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('537d25185aa0b')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3496,7 +3496,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_LocatorService()
     {
-        return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), '/var/www/html/NasajonWebTeamplateProject/app/cache/dev');
+        return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/Sistemas/Workspace/symfony/app/cache/dev');
     }
 
     /**
@@ -3547,7 +3547,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
-        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => '/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
     }
 
     /**
@@ -3601,12 +3601,12 @@ class appDevDebugProjectContainer extends Container
     protected function getDefaultParameters()
     {
         return array(
-            'kernel.root_dir' => '/var/www/html/NasajonWebTeamplateProject/app',
+            'kernel.root_dir' => 'C:/Sistemas/Workspace/symfony/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
             'kernel.name' => 'app',
-            'kernel.cache_dir' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev',
-            'kernel.logs_dir' => '/var/www/html/NasajonWebTeamplateProject/app/logs',
+            'kernel.cache_dir' => 'C:/Sistemas/Workspace/symfony/app/cache/dev',
+            'kernel.logs_dir' => 'C:/Sistemas/Workspace/symfony/app/logs',
             'kernel.bundles' => array(
                 'FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle',
                 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle',
@@ -3690,7 +3690,7 @@ class appDevDebugProjectContainer extends Container
             'debug.errors_logger_listener.class' => 'Symfony\\Component\\HttpKernel\\EventListener\\ErrorsLoggerListener',
             'debug.event_dispatcher.class' => 'Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher',
             'debug.stopwatch.class' => 'Symfony\\Component\\Stopwatch\\Stopwatch',
-            'debug.container.dump' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/appDevDebugProjectContainer.xml',
+            'debug.container.dump' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/appDevDebugProjectContainer.xml',
             'debug.controller_resolver.class' => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
             'kernel.secret' => 'ThisTokenIsNotSoSecretChangeIt',
             'kernel.http_method_override' => true,
@@ -3715,7 +3715,7 @@ class appDevDebugProjectContainer extends Container
             'session.storage.options' => array(
 
             ),
-            'session.save_path' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/sessions',
+            'session.save_path' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/sessions',
             'session.metadata.update_threshold' => '0',
             'security.secure_random.class' => 'Symfony\\Component\\Security\\Core\\Util\\SecureRandom',
             'form.resolved_type_factory.class' => 'Symfony\\Component\\Form\\ResolvedFormTypeFactory',
@@ -3774,7 +3774,7 @@ class appDevDebugProjectContainer extends Container
             'validator.mapping.loader.yaml_files_loader.class' => 'Symfony\\Component\\Validator\\Mapping\\Loader\\YamlFilesLoader',
             'validator.validator_factory.class' => 'Symfony\\Bundle\\FrameworkBundle\\Validator\\ConstraintValidatorFactory',
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
-                0 => '/var/www/html/NasajonWebTeamplateProject/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml',
+                0 => 'C:\\Sistemas\\Workspace\\symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
 
@@ -3798,7 +3798,7 @@ class appDevDebugProjectContainer extends Container
             'data_collector.form.extractor.class' => 'Symfony\\Component\\Form\\Extension\\DataCollector\\FormDataExtractor',
             'profiler_listener.only_exceptions' => false,
             'profiler_listener.only_master_requests' => false,
-            'profiler.storage.dsn' => 'file:/var/www/html/NasajonWebTeamplateProject/app/cache/dev/profiler',
+            'profiler.storage.dsn' => 'file:C:/Sistemas/Workspace/symfony/app/cache/dev/profiler',
             'profiler.storage.username' => '',
             'profiler.storage.password' => '',
             'profiler.storage.lifetime' => 86400,
@@ -3822,7 +3822,7 @@ class appDevDebugProjectContainer extends Container
             'router.request_context.host' => 'localhost',
             'router.request_context.scheme' => 'http',
             'router.request_context.base_url' => '',
-            'router.resource' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/assetic/routing.yml',
+            'router.resource' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/assetic/routing.yml',
             'router.cache_class_prefix' => 'appDev',
             'request_listener.http_port' => 80,
             'request_listener.https_port' => 443,
@@ -3944,7 +3944,7 @@ class appDevDebugProjectContainer extends Container
                 'exception_controller' => 'twig.controller.exception:showAction',
                 'autoescape_service' => NULL,
                 'autoescape_service_method' => NULL,
-                'cache' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/twig',
+                'cache' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/twig',
                 'charset' => 'UTF-8',
                 'paths' => array(
 
@@ -4011,7 +4011,7 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.mailer.default.transport.smtp.auth_mode' => NULL,
             'swiftmailer.mailer.default.transport.smtp.timeout' => 30,
             'swiftmailer.mailer.default.transport.smtp.source_ip' => NULL,
-            'swiftmailer.spool.default.memory.path' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/swiftmailer/spool/default',
+            'swiftmailer.spool.default.memory.path' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/swiftmailer/spool/default',
             'swiftmailer.mailer.default.spool.enabled' => true,
             'swiftmailer.mailer.default.plugin.impersonate' => NULL,
             'swiftmailer.mailer.default.single_address' => NULL,
@@ -4037,7 +4037,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.node.paths' => array(
 
             ),
-            'assetic.cache_dir' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/assetic',
+            'assetic.cache_dir' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/assetic',
             'assetic.bundles' => array(
                 0 => 'NasajonCalendarioBundle',
             ),
@@ -4049,12 +4049,12 @@ class appDevDebugProjectContainer extends Container
             'assetic.debug' => true,
             'assetic.use_controller' => true,
             'assetic.enable_profiler' => false,
-            'assetic.read_from' => '/var/www/html/NasajonWebTeamplateProject/app/../web',
-            'assetic.write_to' => '/var/www/html/NasajonWebTeamplateProject/app/../web',
+            'assetic.read_from' => 'C:/Sistemas/Workspace/symfony/app/../web',
+            'assetic.write_to' => 'C:/Sistemas/Workspace/symfony/app/../web',
             'assetic.variables' => array(
 
             ),
-            'assetic.java.bin' => '/usr/bin/java',
+            'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',
@@ -4123,7 +4123,7 @@ class appDevDebugProjectContainer extends Container
             'doctrine.orm.naming_strategy.default.class' => 'Doctrine\\ORM\\Mapping\\DefaultNamingStrategy',
             'doctrine.orm.naming_strategy.underscore.class' => 'Doctrine\\ORM\\Mapping\\UnderscoreNamingStrategy',
             'doctrine.orm.auto_generate_proxy_classes' => true,
-            'doctrine.orm.proxy_dir' => '/var/www/html/NasajonWebTeamplateProject/app/cache/dev/doctrine/orm/Proxies',
+            'doctrine.orm.proxy_dir' => 'C:/Sistemas/Workspace/symfony/app/cache/dev/doctrine/orm/Proxies',
             'doctrine.orm.proxy_namespace' => 'Proxies',
             'sensio_framework_extra.view.guesser.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Templating\\TemplateGuesser',
             'sensio_framework_extra.controller.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ControllerListener',
@@ -4146,13 +4146,13 @@ class appDevDebugProjectContainer extends Container
             'braincrafted_bootstrap.flash.class' => 'Braincrafted\\Bundle\\BootstrapBundle\\Session\\FlashMessage',
             'braincrafted_bootstrap.customize' => array(
                 'variables_file' => NULL,
-                'bootstrap_output' => '/var/www/html/NasajonWebTeamplateProject/app/Resources/less/bootstrap.less',
+                'bootstrap_output' => 'C:/Sistemas/Workspace/symfony/app/Resources/less/bootstrap.less',
                 'bootstrap_template' => 'BraincraftedBootstrapBundle:Bootstrap:bootstrap.less.twig',
             ),
-            'braincrafted_bootstrap.assets_dir' => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/twbs/bootstrap',
+            'braincrafted_bootstrap.assets_dir' => 'C:/Sistemas/Workspace/symfony/app/../vendor/twbs/bootstrap',
             'braincrafted_bootstrap.output_dir' => NULL,
             'braincrafted_bootstrap.less_filter' => 'none',
-            'jms.google_closure.plovr.jar_path' => '/var/www/html/NasajonWebTeamplateProject/app/../vendor/plovr/plovr.jar',
+            'jms.google_closure.plovr.jar_path' => 'C:/Sistemas/Workspace/symfony/app/../vendor/plovr/plovr.jar',
             'aerial_ship_saml_sp.service_info_collection.class' => 'AerialShip\\SamlSPBundle\\Config\\ServiceInfoCollection',
             'aerial_ship_saml_sp.service_info.class' => 'AerialShip\\SamlSPBundle\\Config\\ServiceInfo',
             'aerial_ship_saml_sp.sp_entity_descriptor_builder.class' => 'AerialShip\\SamlSPBundle\\Config\\SpEntityDescriptorBuilder',

@@ -35,3 +35,11 @@ a1a150,::1,GET,http://localhost/NasajonWebTeamplateProject/web/app_dev.php/saml/
 de3da8,::1,GET,http://localhost/NasajonWebTeamplateProject/web/app_dev.php/saml/sp/login,1400707976,
 f9c037,::1,GET,http://localhost/NasajonWebTeamplateProject/web/app_dev.php/saml/sp/login,1400708349,
 18523f,::1,GET,http://localhost/NasajonWebTeamplateProject/web/app_dev.php/saml/sp/login,1400708408,
+b65630,127.0.0.1,GET,http://symfony.localhost/,1400710428,
+0b7943,127.0.0.1,GET,http://symfony.localhost/app_dev.php/,1400710593,
+8f4645,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.woff,1400710596,63b4ed
+63b4ed,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.woff,1400710596,
+172c02,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.ttf,1400710597,2a13a0
+2a13a0,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.ttf,1400710597,
+9a8f8d,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.ttf,1400710600,7a6b90
+7a6b90,127.0.0.1,GET,http://symfony.localhost/app_dev.php/fonts/klavikamedcaps-sc-webfont.ttf,1400710600,
