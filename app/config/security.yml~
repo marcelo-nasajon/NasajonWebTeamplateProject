@@ -33,7 +33,7 @@ security:
                             file: "@NasajonCalendarioBundle/Resources/idp-FederationMetadata.xml"
                         sp:
                             config:
-                                entity_id: saml.localhost
+                                entity_id: nasajon_calendario
                             signing:
                                 # or use built in SPSigningProviderFile with specific certificate and key files
                                 cert_file: "@NasajonCalendarioBundle/Resources/server.crt"

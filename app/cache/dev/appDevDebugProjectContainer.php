@@ -2019,7 +2019,7 @@ class appDevDebugProjectContainer extends Container
 
         $o = new \AerialShip\SamlSPBundle\Config\SPSigningProviderFile($f, '@NasajonCalendarioBundle/Resources/server.crt', '@NasajonCalendarioBundle/Resources/server.pem', '');
 
-        $p = new \AerialShip\SamlSPBundle\Config\SpEntityDescriptorBuilder('nasajon_calendario', $o, array('entity_id' => 'http://saml.localhost', 'base_url' => NULL, 'want_assertions_signed' => false), '/saml/sp/acs', '/saml/sp/logout', $l);
+        $p = new \AerialShip\SamlSPBundle\Config\SpEntityDescriptorBuilder('nasajon_calendario', $o, array('entity_id' => 'nasajon_calendario', 'base_url' => NULL, 'want_assertions_signed' => false), '/saml/sp/acs', '/saml/sp/logout', $l);
 
         $q = new \AerialShip\SamlSPBundle\Config\EntityDescriptorFileProvider($f);
         $q->setFilename('@NasajonCalendarioBundle/Resources/idp-FederationMetadata.xml');
@@ -2052,7 +2052,7 @@ class appDevDebugProjectContainer extends Container
         $y = new \AerialShip\SamlSPBundle\Security\Http\Firewall\SamlSpAuthenticationListener($b, $j, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $l, 'saml', $n, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $l, array('login_path' => '/saml/sp/login', 'failure_path' => '/saml/sp/failure', 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $a), array('check_path' => '/saml/sp/acs', 'logout_path' => '/saml/sp/logout', 'local_logout_path' => '/logout', 'use_forward' => false, 'require_previous_session' => false, 'login_path' => '/saml/sp/login', 'failure_path' => '/saml/sp/failure', 'target_path_parameter' => '_target_path', 'metadata_path' => '/saml/sp/FederationMetadata.xml', 'discovery_path' => '/saml/sp/discovery'), $a, $c);
         $y->setRelyingParty($x);
 
-        return $this->services['security.firewall.map.context.saml'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'saml', $a, $c), 2 => $m, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '537d1d37c15ca', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $j)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'saml', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/saml/sp/login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.saml'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'saml', $a, $c), 2 => $m, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '537df129d2a91', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $j)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'saml', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/saml/sp/login', false), NULL, NULL, $a));
     }
 
     /**
@@ -3385,7 +3385,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \AerialShip\SamlSPBundle\Security\Core\Authentication\Provider\SamlSpAuthenticationProvider('saml', new \AerialShip\SamlSPBundle\Security\Core\User\UserProviderAdapter($this->get('security.user.provider.concrete.in_memory')), new \Symfony\Component\Security\Core\User\UserChecker(), false), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('537d1d37c15ca')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \AerialShip\SamlSPBundle\Security\Core\Authentication\Provider\SamlSpAuthenticationProvider('saml', new \AerialShip\SamlSPBundle\Security\Core\User\UserProviderAdapter($this->get('security.user.provider.concrete.in_memory')), new \Symfony\Component\Security\Core\User\UserChecker(), false), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('537df129d2a91')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
