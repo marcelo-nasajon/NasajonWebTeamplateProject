@@ -5,3 +5,6 @@ services:
 #    nasajon_calendario.example:
 #        class: %nasajon_calendario.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    custom_user_manager:
+        class: Nasajon\CalendarioBundle\Provider\SamlProvider
