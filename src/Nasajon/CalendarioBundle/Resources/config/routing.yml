@@ -10,6 +10,3 @@ nasajon_calendario_logout:
     pattern:  /logout
     defaults: { _controller: NasajonCalendarioBundle:Login:logout }
 
-nasajon_calendario_hello:
-    pattern:  /hello
-    defaults: { _controller: NasajonCalendarioBundle:Default:hello }

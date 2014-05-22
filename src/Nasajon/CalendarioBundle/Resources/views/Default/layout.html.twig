@@ -51,6 +51,7 @@
 							</div>
 						</form>
 					</div>
+					
 					<div class="col-md-3">
 						<form action="" class="busca" id="nome-usuario">
 							<div id="menu-utilidades" class="pull-right">
@@ -59,7 +60,7 @@
 								    <img src="{{ asset_url }}" />
 								{% endimage %}
 								</a>
-								<a href="logout" id="logout">
+								<a href="{{ path('aerial_ship_saml_sp.security.logout') }}" id="logout">
 									{% image '@NasajonCalendarioBundle/Resources/public/images/icone-logout.jpg' %}
 									    <img src="{{ asset_url }}" />
 									{% endimage %}
@@ -116,7 +117,7 @@
 								{% image '@NasajonCalendarioBundle/Resources/public/images/35x35.png' %}
 								    <img src="{{ asset_url }}" />
 								{% endimage %}
-								<h2><a href="#">Usuario</a></h2>
+								<h2><a href="#">{{user.username}}</a></h2>
 							</div>
 						</form>						
 					</div>

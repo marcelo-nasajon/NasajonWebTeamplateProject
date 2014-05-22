@@ -23,7 +23,7 @@ class SamlProvider implements UserManagerInterface
     public function loadUserBySamlInfo(SamlSpInfo $samlInfo) {
 	  //throw new UsernameNotFoundException();
 	  
-	  return new User($samlInfo->getAttributes()['uid']->getFirstValue(),'',array('ROLE_USER'));
+	  return new User($samlInfo->getAttributes()['email']->getFirstValue(),'',array('ROLE_USER'));
 	  
     }
 
@@ -72,7 +72,6 @@ class SamlProvider implements UserManagerInterface
      * @throws UnsupportedUserException if the account is not supported
      */
     public function refreshUser(UserInterface $user) {
-	var_dump($user);
         return $user;
     }
 
