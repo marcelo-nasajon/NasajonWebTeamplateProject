@@ -1723,56 +1723,6 @@
         ]
     },
     {
-        "name": "symfony/icu",
-        "version": "v1.1.1",
-        "version_normalized": "1.1.1.0",
-        "target-dir": "Symfony/Component/Icu",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/Icu.git",
-            "reference": "0b82950ece96c1f091dcdb088298bd72dbc83a47"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/Icu/zipball/0b82950ece96c1f091dcdb088298bd72dbc83a47",
-            "reference": "0b82950ece96c1f091dcdb088298bd72dbc83a47",
-            "shasum": ""
-        },
-        "require": {
-            "lib-icu": ">=3.8",
-            "php": ">=5.3.3",
-            "symfony/intl": "~2.3"
-        },
-        "time": "2013-10-04 10:05:23",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\Component\\Icu\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            },
-            {
-                "name": "Bernhard Schussek",
-                "email": "bschussek@gmail.com"
-            }
-        ],
-        "description": "Contains an excerpt of the ICU data and classes to load it.",
-        "homepage": "http://symfony.com",
-        "keywords": [
-            "icu",
-            "intl"
-        ]
-    },
-    {
         "name": "rnijveld/xmlseclibs",
         "version": "v1.3.1",
         "version_normalized": "1.3.1.0",
@@ -1823,80 +1773,6 @@
             "xml",
             "xmlsec"
         ]
-    },
-    {
-        "name": "aerialship/lightsaml",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/aerialship/lightsaml.git",
-            "reference": "ef9fbf282218108b48760de460ba4732ba24f42f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/aerialship/lightsaml/zipball/ef9fbf282218108b48760de460ba4732ba24f42f",
-            "reference": "ef9fbf282218108b48760de460ba4732ba24f42f",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3",
-            "rnijveld/xmlseclibs": "1.3.1",
-            "symfony/console": ">=2.2"
-        },
-        "time": "2014-05-12 10:19:47",
-        "bin": [
-            "bin/lightsaml"
-        ],
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Light SAML2 php library"
-    },
-    {
-        "name": "aerialship/saml-sp-bundle",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/aerialship/SamlSPBundle.git",
-            "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/aerialship/SamlSPBundle/zipball/d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
-            "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
-            "shasum": ""
-        },
-        "require": {
-            "aerialship/lightsaml": "dev-master",
-            "php": ">=5.4.1",
-            "symfony/symfony": "~2.2"
-        },
-        "suggest": {
-            "doctrine/orm": "If you want store sso state to database"
-        },
-        "time": "2014-05-18 21:58:56",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Symfony2 SAML2 authentication bundle"
     },
     {
         "name": "lexik/currency-bundle",
@@ -2000,5 +1876,128 @@
             "saas",
             "simpleweb"
         ]
+    },
+    {
+        "name": "symfony/icu",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "target-dir": "Symfony/Component/Icu",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/Icu.git",
+            "reference": "fdba214b1e087c149843bde976263c53ac10c975"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
+            "reference": "fdba214b1e087c149843bde976263c53ac10c975",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "symfony/intl": "~2.3"
+        },
+        "time": "2013-10-04 09:12:07",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\Component\\Icu\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            },
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            }
+        ],
+        "description": "Contains an excerpt of the ICU data and classes to load it.",
+        "homepage": "http://symfony.com",
+        "keywords": [
+            "icu",
+            "intl"
+        ]
+    },
+    {
+        "name": "aerialship/lightsaml",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aerialship/lightsaml.git",
+            "reference": "ef9fbf282218108b48760de460ba4732ba24f42f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aerialship/lightsaml/zipball/ef9fbf282218108b48760de460ba4732ba24f42f",
+            "reference": "ef9fbf282218108b48760de460ba4732ba24f42f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "rnijveld/xmlseclibs": "1.3.1",
+            "symfony/console": ">=2.2"
+        },
+        "time": "2014-05-12 10:19:47",
+        "bin": [
+            "bin/lightsaml"
+        ],
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Light SAML2 php library"
+    },
+    {
+        "name": "aerialship/saml-sp-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aerialship/SamlSPBundle.git",
+            "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aerialship/SamlSPBundle/zipball/d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
+            "reference": "d98c84635ded1ed5eb9acfb6bade7a776e01f77a",
+            "shasum": ""
+        },
+        "require": {
+            "aerialship/lightsaml": "dev-master",
+            "php": ">=5.4.1",
+            "symfony/symfony": "~2.2"
+        },
+        "suggest": {
+            "doctrine/orm": "If you want store sso state to database"
+        },
+        "time": "2014-05-18 21:58:56",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Symfony2 SAML2 authentication bundle"
     }
 ]

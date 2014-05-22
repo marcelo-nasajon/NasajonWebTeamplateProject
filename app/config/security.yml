@@ -13,7 +13,9 @@ security:
                     user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                     admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
 
-
+#        saml_user_provider:
+#            id: AerialShip\SamlSPBundle\Security\Core\User\DoMarceloUserProviderAdapter # implements UserManagerInterface
+                        
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
@@ -27,6 +29,8 @@ security:
                 logout_path: /saml/sp/logout
                 local_logout_path: /logout
                 provider: in_memory
+                
+                create_user_if_not_exists: false
                 services:
                     nasajon_calendario:
                         idp:

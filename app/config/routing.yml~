@@ -1,4 +1,0 @@
-nasajon_calendario:
-    resource: "@NasajonCalendarioBundle/Resources/config/routing.yml"
-    prefix:   /
-
