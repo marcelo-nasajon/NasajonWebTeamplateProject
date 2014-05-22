@@ -10,9 +10,10 @@ security:
         in_memory:
             memory:
                 users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                    _8bea273d7aa1dc801f0cb62ef5dd877ea0307b20c5:  { password: userpass, roles: [ 'ROLE_USER' ] }
                     admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
-
+        nasajon_provider:
+                id: custom_user_manager
 
     firewalls:
         dev:
@@ -20,13 +21,21 @@ security:
             security: false
 
         saml:
-            pattern: ^/
-            anonymous: true
+            pattern: ^/(?!login_check)
+            anonymous: false
             aerial_ship_saml_sp:
+                login_path: /saml/sp/login
                 check_path: /saml/sp/acs
                 logout_path: /saml/sp/logout
+                failure_path: /saml/sp/failure
+                discovery_path: /saml/sp/discovery
+                metadata_path: /saml/sp/FederationMetadata.xml
+                # required - when saml logout is done it's redirected to this path that's supposed to be handled by std symfony logout
                 local_logout_path: /logout
-                provider: in_memory
+                default_target_path: /
+                provider: nasajon_provider
+                #provider: aerial_ship_saml_sp.user_provider_adapte
+                create_user_if_not_exists: false
                 services:
                     nasajon_calendario:
                         idp:
@@ -41,5 +50,19 @@ security:
                                 key_pass: ""
             logout:
                 path: /logout
+                target: /
+                invalidate_session: true
+        secured_area:
+            pattern:    ^
+            anonymous:  ~
+            form_login:
+                check_path: /login_check
+                login_path: /login/
+            logout:
+                path:   /logout/
+                target: /
+
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/saml/sp/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/saml/sp/acs, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/hello, roles: ROLE_USER }
